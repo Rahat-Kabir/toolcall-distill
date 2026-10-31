@@ -7,8 +7,9 @@ On a 500-row ToolACE test split, strict argument accuracy was **62.8% base,
 72.8% ToolACE-only LoRA, and 72.6% mixed-data LoRA**. A separate local BFCL
 alternative-aware metric gave **87.8%, 90.4%, and 90.0%**. These are experimental
 results, not official BFCL leaderboard scores. See [methods and results](docs/experiment.md).
-The trained LoRA adapters are not published yet; reproducing them requires
-retraining with the scripts in this repository.
+The ToolACE-only LoRA adapter behind these 500-example numbers is published at
+[rahatneuron/lfm25-1.2b-toolace-control-s7](https://huggingface.co/rahatneuron/lfm25-1.2b-toolace-control-s7).
+Other adapters from this project are not published; reproduce them with the scripts in this repository.
 
 ## Result charts
 
