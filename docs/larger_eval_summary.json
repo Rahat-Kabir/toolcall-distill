@@ -1,0 +1,397 @@
+{
+  "metric_note": "Local strict and BFCL alternative-aware metrics; not official BFCL AST evaluation.",
+  "larger_eval": {
+    "n_toolace": 500,
+    "n_bfcl": 500,
+    "strict_models": [
+      {
+        "label": "base",
+        "toolace_args": 0.628,
+        "toolace_name": 0.782,
+        "ood_args": 0.596,
+        "ood_name": 0.996,
+        "toolace_counts": {
+          "is_parseable_tool_call": 482,
+          "is_correct_tool_name": 391,
+          "are_arguments_correct": 314
+        },
+        "ood_counts": {
+          "is_parseable_tool_call": 500,
+          "is_correct_tool_name": 498,
+          "are_arguments_correct": 298
+        },
+        "toolace_args_ci95": [
+          0.584,
+          0.67
+        ],
+        "ood_args_ci95": [
+          0.552,
+          0.638
+        ]
+      },
+      {
+        "label": "control",
+        "toolace_args": 0.728,
+        "toolace_name": 0.886,
+        "ood_args": 0.542,
+        "ood_name": 0.994,
+        "toolace_counts": {
+          "is_parseable_tool_call": 488,
+          "is_correct_tool_name": 443,
+          "are_arguments_correct": 364
+        },
+        "ood_counts": {
+          "is_parseable_tool_call": 499,
+          "is_correct_tool_name": 497,
+          "are_arguments_correct": 271
+        },
+        "toolace_args_ci95": [
+          0.69,
+          0.768
+        ],
+        "ood_args_ci95": [
+          0.498,
+          0.586
+        ]
+      },
+      {
+        "label": "mixed",
+        "toolace_args": 0.726,
+        "toolace_name": 0.884,
+        "ood_args": 0.55,
+        "ood_name": 0.994,
+        "toolace_counts": {
+          "is_parseable_tool_call": 489,
+          "is_correct_tool_name": 442,
+          "are_arguments_correct": 363
+        },
+        "ood_counts": {
+          "is_parseable_tool_call": 499,
+          "is_correct_tool_name": 497,
+          "are_arguments_correct": 275
+        },
+        "toolace_args_ci95": [
+          0.686,
+          0.764
+        ],
+        "ood_args_ci95": [
+          0.506,
+          0.594
+        ]
+      }
+    ],
+    "strict_paired_deltas": {
+      "control": {
+        "toolace_vs_base": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 42,
+          "observed_base": 0.628,
+          "observed_other": 0.728,
+          "observed_delta": 0.09999999999999998,
+          "delta_ci95": [
+            0.06599999999999995,
+            0.136
+          ],
+          "base_ci95": [
+            0.586,
+            0.67
+          ],
+          "other_ci95": [
+            0.688,
+            0.766
+          ],
+          "fraction_delta_positive": 1.0
+        },
+        "ood_vs_base": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.596,
+          "observed_other": 0.542,
+          "observed_delta": -0.05399999999999994,
+          "delta_ci95": [
+            -0.08599999999999997,
+            -0.02400000000000002
+          ],
+          "base_ci95": [
+            0.552,
+            0.638
+          ],
+          "other_ci95": [
+            0.498,
+            0.586
+          ],
+          "fraction_delta_positive": 0.0
+        }
+      },
+      "mixed": {
+        "toolace_vs_base": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 42,
+          "observed_base": 0.628,
+          "observed_other": 0.726,
+          "observed_delta": 0.09799999999999998,
+          "delta_ci95": [
+            0.06399999999999995,
+            0.132
+          ],
+          "base_ci95": [
+            0.586,
+            0.67
+          ],
+          "other_ci95": [
+            0.686,
+            0.764
+          ],
+          "fraction_delta_positive": 1.0
+        },
+        "ood_vs_base": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.596,
+          "observed_other": 0.55,
+          "observed_delta": -0.04599999999999993,
+          "delta_ci95": [
+            -0.07599999999999996,
+            -0.018000000000000016
+          ],
+          "base_ci95": [
+            0.552,
+            0.638
+          ],
+          "other_ci95": [
+            0.508,
+            0.592
+          ],
+          "fraction_delta_positive": 0.0004
+        }
+      },
+      "mixed_vs_control": {
+        "toolace": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 44,
+          "observed_base": 0.728,
+          "observed_other": 0.726,
+          "observed_delta": -0.0020000000000000018,
+          "delta_ci95": [
+            -0.018000000000000016,
+            0.014000000000000012
+          ],
+          "base_ci95": [
+            0.69,
+            0.768
+          ],
+          "other_ci95": [
+            0.688,
+            0.764
+          ],
+          "fraction_delta_positive": 0.363
+        },
+        "ood": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 45,
+          "observed_base": 0.542,
+          "observed_other": 0.55,
+          "observed_delta": 0.008000000000000007,
+          "delta_ci95": [
+            -0.008000000000000007,
+            0.02400000000000002
+          ],
+          "base_ci95": [
+            0.498,
+            0.586
+          ],
+          "other_ci95": [
+            0.506,
+            0.594
+          ],
+          "fraction_delta_positive": 0.8064
+        }
+      }
+    },
+    "bfcl_alternative_aware": {
+      "base": {
+        "example_count": 500,
+        "counts": {
+          "is_parseable_tool_call": 500,
+          "is_correct_tool_name": 498,
+          "are_arguments_correct": 439
+        },
+        "rates": {
+          "is_parseable_tool_call": 1.0,
+          "is_correct_tool_name": 0.996,
+          "are_arguments_correct": 0.878
+        },
+        "missing_prediction_count": 0
+      },
+      "control": {
+        "example_count": 500,
+        "counts": {
+          "is_parseable_tool_call": 499,
+          "is_correct_tool_name": 497,
+          "are_arguments_correct": 452
+        },
+        "rates": {
+          "is_parseable_tool_call": 0.998,
+          "is_correct_tool_name": 0.994,
+          "are_arguments_correct": 0.904
+        },
+        "missing_prediction_count": 0
+      },
+      "mixed": {
+        "example_count": 500,
+        "counts": {
+          "is_parseable_tool_call": 499,
+          "is_correct_tool_name": 497,
+          "are_arguments_correct": 450
+        },
+        "rates": {
+          "is_parseable_tool_call": 0.998,
+          "is_correct_tool_name": 0.994,
+          "are_arguments_correct": 0.9
+        },
+        "missing_prediction_count": 0
+      }
+    },
+    "bfcl_paired_comparisons": {
+      "control_vs_base": {
+        "strict": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.596,
+          "observed_other": 0.542,
+          "observed_delta": -0.05399999999999994,
+          "delta_ci95": [
+            -0.08599999999999997,
+            -0.02400000000000002
+          ],
+          "base_ci95": [
+            0.552,
+            0.638
+          ],
+          "other_ci95": [
+            0.498,
+            0.586
+          ],
+          "fraction_delta_positive": 0.0
+        },
+        "alternative_aware": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.878,
+          "observed_other": 0.904,
+          "observed_delta": 0.026000000000000023,
+          "delta_ci95": [
+            0.0020000000000000018,
+            0.050000000000000044
+          ],
+          "base_ci95": [
+            0.848,
+            0.906
+          ],
+          "other_ci95": [
+            0.878,
+            0.93
+          ],
+          "fraction_delta_positive": 0.983
+        }
+      },
+      "mixed_vs_base": {
+        "strict": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.596,
+          "observed_other": 0.55,
+          "observed_delta": -0.04599999999999993,
+          "delta_ci95": [
+            -0.07599999999999996,
+            -0.018000000000000016
+          ],
+          "base_ci95": [
+            0.552,
+            0.638
+          ],
+          "other_ci95": [
+            0.508,
+            0.592
+          ],
+          "fraction_delta_positive": 0.0004
+        },
+        "alternative_aware": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.878,
+          "observed_other": 0.9,
+          "observed_delta": 0.02200000000000002,
+          "delta_ci95": [
+            0.0,
+            0.04200000000000004
+          ],
+          "base_ci95": [
+            0.848,
+            0.906
+          ],
+          "other_ci95": [
+            0.874,
+            0.926
+          ],
+          "fraction_delta_positive": 0.9732
+        }
+      },
+      "mixed_vs_control": {
+        "strict": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.542,
+          "observed_other": 0.55,
+          "observed_delta": 0.008000000000000007,
+          "delta_ci95": [
+            -0.008000000000000007,
+            0.02400000000000002
+          ],
+          "base_ci95": [
+            0.498,
+            0.586
+          ],
+          "other_ci95": [
+            0.508,
+            0.592
+          ],
+          "fraction_delta_positive": 0.8072
+        },
+        "alternative_aware": {
+          "n_examples": 500,
+          "n_bootstrap": 5000,
+          "seed": 43,
+          "observed_base": 0.904,
+          "observed_other": 0.9,
+          "observed_delta": -0.0040000000000000036,
+          "delta_ci95": [
+            -0.016000000000000014,
+            0.008000000000000007
+          ],
+          "base_ci95": [
+            0.878,
+            0.93
+          ],
+          "other_ci95": [
+            0.874,
+            0.926
+          ],
+          "fraction_delta_positive": 0.2218
+        }
+      }
+    }
+  },
+  "historical_source_revisions": "Not recorded; exact historical reproduction is not guaranteed."
+}

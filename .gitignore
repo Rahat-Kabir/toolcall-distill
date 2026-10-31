@@ -1,0 +1,36 @@
+# Environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private working files and generated artifacts
+.local/
+results/
+job_bundle/
+.hf_cache/
+.cache/
+.huggingface/
+*.log
+*.pt
+*.bin
+*.safetensors
+
+# Downloaded datasets and converted rows; retain only selection metadata
+data/*
+!data/README.md
+!data/ood_conversion_notes.json
+
+# Unsloth writes compiled trainer copies into the working directory
+unsloth_compiled_cache/

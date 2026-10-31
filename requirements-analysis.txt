@@ -1,0 +1,3 @@
+# Optional plotting dependencies; scoring and bootstrapping use the standard library.
+matplotlib==3.10.8
+numpy==2.2.6

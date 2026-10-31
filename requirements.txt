@@ -1,0 +1,8 @@
+# Local data preparation and inference environment.
+# Install a PyTorch build appropriate for the target CPU/CUDA hardware.
+datasets==4.3.0
+transformers==4.57.6
+torch==2.10.0
+huggingface_hub==0.36.2
+accelerate==1.13.0
+peft==0.18.1

@@ -1,0 +1,2 @@
+# Default offline test suite; no model packages required.
+pytest==8.4.2
