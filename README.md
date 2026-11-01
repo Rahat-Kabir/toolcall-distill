@@ -11,6 +11,8 @@ The ToolACE-only LoRA adapter behind these 500-example numbers is published at
 [rahatneuron/lfm25-1.2b-toolace-control-s7](https://huggingface.co/rahatneuron/lfm25-1.2b-toolace-control-s7).
 Other adapters from this project are not published; reproduce them with the scripts in this repository.
 
+**Try the demo:** [toolcall-distill-demo](https://huggingface.co/spaces/rahatneuron/toolcall-distill-demo) shows the base model vs. this LoRA side by side on 6 held-out examples (recorded outputs).
+
 ## Result charts
 
 Committed copies live in `docs/images/` (rendered with
